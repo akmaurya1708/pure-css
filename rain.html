@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Awesome Animated Raining Efftect using CSS</title>
+</head>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #222c30;
+		font-family: 'open sans',sans-serif;
+	}
+	.bg {
+		background-image: url(images/rain-background.jpg);
+		background-size: cover;
+		height: 100vh;
+		position: relative;
+		z-index: 1;
+		background-position: center;
+	}
+	.bg:after {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		background-color: rgba(0,0,0,0.5);
+	}
+	.rain{
+		background-image: url(images/rain.png);
+		height: 100vh;
+		width: 100%;
+		background-repeat: repeat;
+		animation: raining 0.3s linear infinite;
+		opacity: 0.2;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+	}
+	@keyframes raining {
+		0%{background-position: 0% 0%;}
+		100%{background-position: 100px 100%}
+	}
+	@media (orientation: landscape) {
+		@keyframes raining {
+			0%{background-position: 0% 0%;}
+			100%{background-position: 80px -100%}
+		}
+	}
+</style>
+<body>
+	<div class="bg"></div>
+	<div class="rain"></div>
+</body>
+</html>

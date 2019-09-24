@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Social Icon Awesome CSS Effect</title>
+	<script src="https://kit.fontawesome.com/fdf17aac53.js"></script>
+</head>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #141e30;
+		background: radial-gradient( #243b55, #141e30);
+		background: -webkit-radial-gradient( #243b55, #141e30);
+		font-family: 'open sans',sans-serif;
+	}
+	.cover {
+		height: 100vh;
+		display: table;
+		vertical-align: middle;
+		width: 100%;
+		text-align: center;
+	}
+	ul.stylish-social {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	ul.stylish-social li {
+		display: inline-block;
+		margin: 10px;
+		transition: all 0.3s ease-in-out;
+	}
+	ul.stylish-social li a {
+		display: block;
+		position: relative;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		background-color: #141e30;
+		color: #ffffff;
+		transform: skew(-30deg, 30deg);
+		box-shadow: -10px 10px 5px 5px rgba(0,0,0,0.5);
+		transition: all 0.3s ease-in-out;
+		top: 0;
+	}
+	ul.stylish-social li:hover a {
+		top: -20px;
+		box-shadow: -30px 30px 26px 5px rgba(0,0,0,0.25);
+	}
+	ul.stylish-social li a:after {
+		content: "";
+		position: absolute;
+		left: -5px;
+		right: 0;
+		height: 10px;
+		width: 100%;
+		background-color: #0f0f0f;
+		transform: skewX(-40deg);
+		top: 50px;
+	}
+	ul.stylish-social li a:before {
+		content: "";
+		position: absolute;
+		left: -10px;
+		height: 50px;
+		width: 10px;
+		background-color: #010101;
+		transform: skewY(-50deg);
+		top: 5px;
+	}
+</style>
+<body>
+	<div class="cover">
+		<ul class="stylish-social">
+			<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+			<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+		</ul>
+	</div>
+</body>
+</html>

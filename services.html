@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Awesome Services Block using CSS Effect</title>
+    <style type="text/css">
+    	* {
+    		margin: 0;
+    		padding: 0;
+    		box-sizing: border-box;
+    		-webkit-box-sizing: border-box;
+    	}
+    	body{
+    		font-family: 'Open Sans', sans-serif;
+    		background-color: #ffffff;
+    	}
+    	.container {
+    		padding: 0 15px;
+			display: grid;
+			grid-template-areas: 'box box box box';
+			grid-gap: 40px;
+			max-width: 1140px;
+			height: 100vh;
+			margin: auto;
+			/* justify-items: center; */
+			align-items: center;
+		}
+		.service-box {
+			padding: 15px;
+			position: relative;
+			min-height: 350px;
+			display: flex;
+			/* justify-content: center; */
+			align-items: center;
+			/* flex-direction: row; */
+			background-color: #ffffff;
+			transition: all 0.2s ease-in-out;
+		}
+		.service-box:before {
+			content: "";
+			top: 2px;
+			right: 2px;
+			left: 2px;
+			bottom: 2px;
+			position: absolute;
+			z-index: -1;
+			transform: skew(2deg, 2deg);
+			background-color: #ffffff;
+			transition: all 0.2s ease-in-out;
+		}
+		.service-box:nth-child(1):before {background-image: linear-gradient(315deg, #DCE35B, #45B649);}
+		.service-box:nth-child(2):before {background-image: linear-gradient(315deg, #4568DC, #B06AB3);}
+		.service-box:nth-child(3):before {background-image: linear-gradient(315deg, #ee0979, #ff6a00);}
+		.service-box:nth-child(4):before {background-image: linear-gradient(315deg, #43C6AC, #F8FFAE);}
+		.service-box .box-content{
+			color: #555;
+			transition: all 0.3s ease-in-out;
+		}
+		.service-box .box-content h2 {
+			font-size: 100px;
+			position: absolute;
+			z-index: 0;
+			opacity: 0.15;
+			right: 20px;
+			top: 50px;
+			transition: all 0.3s ease-in-out;
+		}
+		.service-box .box-content h3 {
+			margin-bottom: 15px;
+		}
+		.service-box .box-content p {
+			font-size: 14px;
+			line-height:24px;
+		}
+		.service-box .box-content .btn {
+			display: inline-block;
+			top: -30px;
+			padding: 10px 15px;
+			text-decoration: none;
+			border: 2px solid #333;
+			color: #333;
+			text-transform: uppercase;
+			opacity: 0;
+			position: relative;
+			transition: all 0.3s ease-in-out;
+			font-weight: bold;
+		}
+		.service-box .box-content .btn:hover{
+			background-color: #333;
+			color: #fff;
+		}		
+		.service-box:hover:before {
+			top: -2px;
+			right: -2px;
+			left: -2px;
+			bottom: -2px;
+		}
+		.service-box:hover .box-content{
+			color: #333
+		}
+		.service-box:hover .box-content h2 {
+			top: 0;
+			opacity: 0.25;
+		}
+		.service-box:hover .box-content .btn {
+			top: 15px;
+			opacity: 1
+		}
+		@media (max-width: 980px) {
+			.container {
+				grid-template-areas: 'box box';
+			}
+		}
+		@media (max-width: 640px) {
+			.container {
+				grid-template-areas: 'box';
+			}
+		}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="service-box">
+			<div class="box-content">
+				<h2>01</h2>
+				<h3>Heading One</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+		</div>
+		<div class="service-box">
+			<div class="box-content">
+				<h2>02</h2>
+				<h3>Heading Two</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+		</div>
+		<div class="service-box">
+			<div class="box-content">
+				<h2>03</h2>
+				<h3>Heading Three</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+		</div>
+		<div class="service-box">
+			<div class="box-content">
+				<h2>04</h2>
+				<h3>Heading Four</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

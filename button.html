@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Stylish button</title>
+</head>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #141e30;
+		background: -webkit-radial-gradient( #243b55, #141e30);
+		background: radial-gradient( #243b55, #141e30);
+		font-family: 'open sans',sans-serif;
+		height: 100vh
+	}
+	.smart-btn {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #141e30;
+		color: #00d2ff;
+		font-size: 30px;
+		padding: 20px 50px;
+		text-transform: uppercase;
+		text-decoration: none;
+		overflow: hidden;
+		transition: all 0.2s ease-in-out;
+		-webkit-transition: all 0.2s ease-in-out;
+	}
+	.smart-btn:hover {
+		box-shadow: 0 0px 50px #00d2ff, 0 0px 40px #00d2ff, 0 0px 20px #00d2ff;
+		background-color: #00d2ff;
+		color: #141e30;
+		/*transition-delay: 0.5s;*/
+	}
+	.shadow {
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    background-color: rgba(0,0,0,0);
+	    width: 200px;
+	    height: 5px;
+	    border-radius: 50%;
+	    margin-top: 15px;
+	    z-index: -1;
+	}
+	.smart-btn:before {
+		content: "";
+		position: absolute;
+		left: 0%;
+		width: 50%;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.2);
+		transition: all 0.2s ease-in-out;
+		-webkit-transition: all 0.2s ease-in-out;
+	}
+	.smart-btn:hover:before {
+		left: 50%;
+	}
+	.smart-btn span {
+		position: absolute;
+	}
+	.smart-btn span:nth-child(1) {
+		top: 0;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background: linear-gradient(to right, rgba(0,0,0,0), #00d2ff);
+		background: -webkit-linear-gradient(to right, rgba(0,0,0,0), #00d2ff);
+		animation: span1 1s linear infinite;
+		animation-delay: .5s;
+	}
+	@keyframes span1 {
+	  0% {transform: translateX(-100%);-webkit-transform: translateX(-100%);}
+	  100% {transform: translateX(100%);-webkit-transform: translateX(100%);}
+	}
+	.smart-btn span:nth-child(2) {
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 2px;
+		background: linear-gradient(to bottom, rgba(0,0,0,0), #00d2ff);
+		background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0), #00d2ff);
+		animation: span2 1s linear infinite;
+	}
+	@keyframes span2 {
+	  0% {transform: translateY(-100%);-webkit-transform: translateY(-100%);}
+	  100% {transform: translateY(100%);-webkit-transform: translateY(100%);}
+	}
+	.smart-btn span:nth-child(3) {
+		bottom: 0;
+		right: 0;
+		height: 2px;
+		width: 100%;
+		background: linear-gradient(to left, rgba(0,0,0,0), #00d2ff);
+		background: -webkit-linear-gradient(to left, rgba(0,0,0,0), #00d2ff);
+		animation: span3 1s linear infinite;
+		animation-delay: 0.5s;
+	}
+	@keyframes span3 {
+	  0% {transform: translateX(100%);-webkit-transform: translateX(100%);}
+	  100% {transform: translateX(-100%);-webkit-transform: translateX(-100%);}
+	}
+	.smart-btn span:nth-child(4) {
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		width: 2px;
+		background: linear-gradient(to top, rgba(0,0,0,0), #00d2ff);
+		background: -webkit-linear-gradient(to top, rgba(0,0,0,0), #00d2ff);
+		animation: span4 1s linear infinite;
+	}
+	@keyframes span4 {
+	  0% {transform: translateY(100%);-webkit-transform: translateY(100%);}
+	  100% {transform: translateY(-100%);-webkit-transform: translateY(-100%);}
+	}
+	@media (max-width: 767px) {
+		.smart-btn {
+			font-size: 20px;
+			padding: 10px 20px;
+		}
+		.shadow {
+			width: 120px;
+			box-shadow: 0 30px 22px 6px rgba(0,0,0,1);
+		}
+	}
+</style>
+<body>
+
+	<a href="#" class="smart-btn">Read More <span></span><span></span><span></span><span></span></a>
+	<span class="shadow"></span>
+</body>
+</html>

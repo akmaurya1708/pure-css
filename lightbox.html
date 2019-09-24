@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Pure Css Gallery Lightbox</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+      body {
+        background-color: #141e30;
+        background: -webkit-radial-gradient( #243b55, #141e30);
+        background: radial-gradient( #243b55, #141e30);
+        font-family: 'open sans',sans-serif;
+        height: 100vh;
+      }
+      img {
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      section#gallery {
+        padding: 50px 15px;
+        max-width: 1140px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        right: 0;
+        margin: auto;
+        transform: translateY(-50%);
+      }
+      .section-header {
+        margin-bottom: 30px;
+        color: #fff;
+      }
+      .section-header h2 {
+        font-size: 34px;
+      }
+      ul.gallery {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      ul.gallery li {
+        display: inline-block;
+        width: 25%;
+        margin: 0 -4px -4px 0;
+        padding: 5px;
+      }
+      ul.gallery li img {
+        display: block;
+      }
+      .light-box-cont {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 99999;
+        transform: scale(0, 0);
+        transition: all 0.3s ease-in-out; 
+      }
+      .light-box-cont:target {
+        transform: scale(1, 1); 
+      }
+      .light-box-cont .light-box-content {
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 95%;
+        max-width: 1200px; 
+      }
+      .light-box-cont .light-box-content img {
+        max-height: 90%;
+        display: block;
+        margin: auto; 
+      }
+      .light-box-cont .light-box-content .close {
+        position: absolute;
+        right: 0;
+        color: #fff;
+        font-size: 33px;
+        font-weight: normal;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: .8;
+        border: 1px solid #fff;
+        top: -50px;
+      }
+
+      .light-button:target {
+        display: block; 
+      }
+      .lightbox-des {
+        padding: 10px;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        left: 0;
+        z-index: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+      }
+      .light-box-content a.next {
+        position: absolute;
+        color: #fff;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 40px;
+        width: 40px;
+        margin: auto;
+        font-size: 24px;
+        border: 2px solid #fff;
+        text-align: center;
+        line-height: 34px;
+        border-radius: 50%;
+      }
+      .light-box-content a.prev {
+        position: absolute;
+        color: #fff;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 40px;
+        width: 40px;
+        margin: auto;
+        font-size: 24px;
+        border: 2px solid #fff;
+        text-align: center;
+        line-height: 34px;
+        border-radius: 50%;
+      }
+      @media (max-width: 767px) {
+        ul.gallery li {
+          width: 50%;
+        }
+        section#gallery {
+          position: static;
+          margin: 0 auto;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <section id="gallery">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+        </div>
+        <ul class="gallery">
+          <li><a href="#light1"><img src="gallery/image001.jpg" alt=""></a></li>
+          <li><a href="#light2"><img src="gallery/image002.jpg" alt=""></a></li>
+          <li><a href="#light3"><img src="gallery/image003.jpg" alt=""></a></li>
+          <li><a href="#light4"><img src="gallery/image004.jpg" alt=""></a></li>
+        </ul>
+      </section>
+    <div class="light-box">
+      <div class="light-box-cont" id="light1">
+        <div class="light-box-content">
+          <a href="#gallery" class="close">x</a>
+          <a href="#light2" class="next">></a>
+          <img src="gallery/image001.jpg" align="">
+          <div class="lightbox-des"><h3>Title of image</h3>
+          <p>Discription of image</p></div>
+        </div>
+      </div>
+      <div class="light-box-cont" id="light2">
+        <div class="light-box-content">
+          <a href="#gallery" class="close">x</a>
+          <a href="#light1" class="prev"><</a>
+          <a href="#light3" class="next">></a>
+          <img src="gallery/image002.jpg" align="">
+          <div class="lightbox-des"><h3>Title of image</h3>
+          <p>Discription of image</p></div>
+        </div>
+      </div>
+      <div class="light-box-cont" id="light3">
+        <div class="light-box-content">
+          <a href="#gallery" class="close">x</a>
+          <a href="#light2" class="prev"><</a>
+          <a href="#light4" class="next">></a>
+          <img src="gallery/image003.jpg" align="">
+          <div class="lightbox-des"><h3>Title of image</h3>
+          <p>Discription of image</p></div>
+        </div>
+      </div>
+      <div class="light-box-cont" id="light4">
+        <div class="light-box-content">
+          <a href="#gallery" class="close">x</a>
+          <a href="#light3" class="prev"><</a>
+          <img src="gallery/image004.jpg" align="">
+          <div class="lightbox-des"><h3>Title of image</h3>
+          <p>Discription of image</p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

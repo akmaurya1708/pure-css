@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Awesome raining effect using CSS only</title>
+</head>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #0B1523;
+		background-image: url(leaves/autumn-leaves.jpg);
+		background-size: cover;
+		font-family: 'open sans',sans-serif;
+	}
+	.wrapper {
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+	}
+	.wrapper:after {
+		content: "";
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0.8);
+		position: absolute;
+	}
+	.layer img {
+		max-width: 100px;
+	}
+	.text {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		color: #fff;
+		font-size: 6vw;
+		text-transform: uppercase;
+		text-decoration: none;
+		z-index: 9;
+	}
+	.layer {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		z-index: 8;
+	}
+	.layer2 {
+		z-index: 10;
+		transform: scale(2) rotateY(180deg);
+		-webkit-transform: scale(2) rotateY(180deg);
+		filter: blur(1px);
+		-ms-filter: blur(1px);
+		-webkit-filter: blur(1px);
+	}
+	.layer3 {
+		z-index: 10;
+		transform: scale(.8) rotateX(180deg);
+		-webkit-transform: scale(.8) rotateX(180deg);
+		filter: blur(3px);
+		-ms-filter: blur(3px);
+		-webkit-filter: blur(3px);
+	}
+	.layer div {
+		position: absolute;
+		display: block;
+		top: -25%;
+	}
+	.layer div:nth-child(1) {
+		left: 0;
+		animation: animating 15s linear infinite;
+		animation-delay: -8s;
+	}
+	.layer div:nth-child(2) {
+		left: 14%;
+		animation: animating 20s linear infinite;
+		animation-delay: -15s;
+	}
+	.layer div:nth-child(3) {
+		left: 28%;
+		animation: animating 50s linear infinite;
+		animation-delay: -5s;
+	}
+	.layer div:nth-child(4) {
+		left: 45%;
+		animation: animating 40s linear infinite;
+		animation-delay: -10s;
+	}
+	.layer div:nth-child(5) {
+		left: 60%;
+		animation: animating 30s linear infinite;
+		animation-delay: -3s;
+	}
+	.layer div:nth-child(6) {
+		left: 80%;
+		animation: animating 25s linear infinite;
+		animation-delay: -6s;
+	}
+	.layer div:nth-child(7) {
+		left: 9%;
+		animation: animating 30s linear infinite;
+		animation-delay: -10s;
+	}
+	.layer div:nth-child(8) {
+		left: 50%;
+		animation: animating 20s linear infinite;
+		animation-delay: -6s;
+	}
+	.layer div:nth-child(9) {
+		left: 70%;
+		animation: animating 55s linear infinite;
+		animation-delay: -10s;
+	}
+	@keyframes animating {
+		0% {top:-20%; opacity: 0;}
+		10% {opacity: 1;}
+		20% { transform: translateX(-20px) rotate(45deg); -webkit-transform: translateX(-20px) rotate(45deg); }
+		40% { transform: translateX(-20px) rotate(90deg); -webkit-transform: translateX(-20px) rotate(90deg); }
+		60% { transform: translateX(-20px) rotate(120deg); -webkit-transform: translateX(-20px) rotate(120deg); }
+		80% { transform: translateX(-20px) rotate(180deg); -webkit-transform: translateX(-20px) rotate(180deg); }
+		100% {top:120%; transform: translateX(-20px) rotate(220deg); -webkit-transform: translateX(-20px) rotate(220deg); }
+	}
+
+</style>
+<body>
+	<section class="wrapper">
+		<h2 class="text">Awesome Animated Leaves</h2>
+		<div class="layer">
+			<div><img src="leaves/leaves-1.png" alt=""></div>
+			<div><img src="leaves/leaves-2.png" alt=""></div>
+			<div><img src="leaves/leaves-3.png" alt=""></div>
+			<div><img src="leaves/leaves-4.png" alt=""></div>
+			<div><img src="leaves/leaves-5.png" alt=""></div>
+			<div><img src="leaves/leaves-6.png" alt=""></div>
+			<div><img src="leaves/leaves-4.png" alt=""></div>
+			<div><img src="leaves/leaves-5.png" alt=""></div>
+			<div><img src="leaves/leaves-6.png" alt=""></div>
+		</div>
+		<div class="layer layer2">
+			<div><img src="leaves/leaves-1.png" alt=""></div>
+			<div><img src="leaves/leaves-2.png" alt=""></div>
+			<div><img src="leaves/leaves-3.png" alt=""></div>
+			<div><img src="leaves/leaves-4.png" alt=""></div>
+			<div><img src="leaves/leaves-5.png" alt=""></div>
+			<div><img src="leaves/leaves-6.png" alt=""></div>
+			<div><img src="leaves/leaves-4.png" alt=""></div>
+			<div><img src="leaves/leaves-5.png" alt=""></div>
+			<div><img src="leaves/leaves-6.png" alt=""></div>
+		</div>
+		<div class="layer layer3">
+			<div><img src="leaves/leaves-1.png" alt=""></div>
+			<div><img src="leaves/leaves-2.png" alt=""></div>
+			<div><img src="leaves/leaves-3.png" alt=""></div>
+			<div><img src="leaves/leaves-4.png" alt=""></div>
+			<div><img src="leaves/leaves-5.png" alt=""></div>
+			<div><img src="leaves/leaves-6.png" alt=""></div>
+			<div><img src="leaves/leaves-4.png" alt=""></div>
+			<div><img src="leaves/leaves-5.png" alt=""></div>
+			<div><img src="leaves/leaves-6.png" alt=""></div>
+		</div>
+	</section>
+</body>
+</html>

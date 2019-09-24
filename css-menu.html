@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Pure CSS Burger Navigation Without jQuery</title>
+	<script src="https://kit.fontawesome.com/fdf17aac53.js"></script>
+</head>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #141e30;
+		background: radial-gradient( #243b55, #141e30);
+		background: -webkit-radial-gradient( #243b55, #141e30);
+		font-family: 'open sans',sans-serif;
+	}
+	.cover {
+		height: 100vh;
+		display: table;
+		vertical-align: middle;
+		width: 100%;
+		text-align: center;
+	}
+	.cover h2 {
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 50px;
+		color: #ffffff;
+		font-weight: 300;
+	}
+
+	/*Navigation*/
+	.nav-list-cont {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		background-color: rgba(0,0,0,0.9);
+		opacity: 0;
+		transform: scale(0);
+		transition: all 0.3s ease-in-out;
+		display: table;
+	}
+	.custom-menu input[type="checkbox"]:checked ~ .nav-list-cont{
+		transform: scale(1);
+		opacity: 1;
+	}
+	.nav-list-cont .nav-list {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.nav-list-cont .nav-list li {
+		margin: 15px 0;
+	}
+	.nav-list-cont .nav-list li a {
+		color: #ffffff;
+		font-size: 22px;
+		font-weight: 300;
+		text-decoration: none;
+	}
+	.custom-menu input[type="checkbox"] {
+		display: none;
+	}
+	.custom-menu input[type="checkbox"] + label {
+		height: 30px;
+		width: 30px;
+		display: block;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		cursor: pointer;
+		z-index: 9999;
+	}
+	.custom-menu input[type="checkbox"] + label span{
+		height: 2px;
+		width: 30px;
+		display: block;
+		position: absolute;
+		background-color: #ffffff;
+		top: 10px;
+		left: 0;
+		transition: all 0.3s ease-in-out;
+	}
+	.custom-menu input[type="checkbox"] + label:before, .custom-menu input[type="checkbox"] + label:after {
+		content: "";
+		height: 2px;
+		width: 30px;
+		background-color: #ffffff;
+		display: block;
+		position: relative;
+		top: -2px;
+		left: 0;
+		transition: all 0.3s ease-in-out;
+	}
+	.custom-menu input[type="checkbox"] + label:after {
+		top: 20px;
+	}
+	.custom-menu input[type="checkbox"]:checked + label span{
+		opacity: 0;
+	}
+	.custom-menu input[type="checkbox"]:checked + label:before {
+		transform: rotate(45deg);
+		top: 14px;
+	}
+	.custom-menu input[type="checkbox"]:checked + label:after {
+		top: 12px;
+		transform: rotate(-45deg);
+	}
+</style>
+<body>
+	<div class="custom-menu">
+		<input type="checkbox" name="nav-button" id="nav-button">
+		<label for="nav-button"><span></span></label>
+		<div class="nav-list-cont">
+			<ul class="nav-list">
+				<li><a href="">Home</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Gallery</a></li>
+				<li><a href="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="cover">
+		<h2>Pure CSS Burger Navigation Without jQuery</h2>
+	</div>
+</body>
+</html>
